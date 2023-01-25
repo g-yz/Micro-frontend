@@ -49,7 +49,7 @@ In November 2017, Thought Works recommended Single-Spa for Microfrontends implem
 Finally, around April 2021, Thoughtworks started to recommend Module Federation for Microfrontends implementations.
 However, micro frontends are still in their early steps since there are still several aspects to review like segurity, intercommunication, etc.
 
-![imagen](uploads/001cb3564653a38f3e76c81ec0c04922/imagen.png)
+![image](https://user-images.githubusercontent.com/12683240/214583851-9b6557ec-1784-4e07-ae8e-6f3bd71bcc8f.png)
 
 ### Microfront
 
@@ -95,7 +95,7 @@ Despite the usefulness of iFrame, it does come with some downsides:
 
 Single-spa is a JavaScript framework for bringing together multiple micro frontends in a single front-end application. Single-spa has been a go-to framework for micro frontend integration for our teams, and they're finding it to work well with SystemJS and managing different versions of a single dependency.
 
-![imagen](uploads/0ed135580a67843ba2e3d62f4bc6ac76/imagen.png)
+![image](https://user-images.githubusercontent.com/12683240/214583926-10293d3b-76aa-4cf8-a650-810d085c1ae5.png)
 
 Pros
 - The main benefit was improving the developer experience. Each Single-SPA app is developed separately, so when a developer starts to work on a React app (Single-SPA app) he/she does not need to install all the dependencies for other apps, like Angular, or to know how other apps are configured. Also because each app is small the development cycle of local builds, hot-reloads, and tests are much shorter in time. Developers can build features (Single-SPA apps) truly independently and separately. So now we could use all the experiences of our React developers in our legacy website.
@@ -121,7 +121,7 @@ Module Federation is a more efficient approach to sharing code and exposing any 
 
 The Module Federation is actually part of Webpack config. This config enables us to expose or receive different parts of the CRA to another CRA project. These separate project should not have dependencies between each other, so they can be developed and deployed individually.
 
-![imagen](uploads/ada90da4507a6da4b1b923448567a3a8/imagen.png)
+![image](https://user-images.githubusercontent.com/12683240/214583962-ff6b1033-bd52-49f2-8706-657d63b1e75f.png)
 
 Pros
 - Easier to maintain
@@ -149,8 +149,7 @@ When not used
 - You do not use Webpack 5 as a module bundler
 - Your application is on an old Angular version < 11.0.0
 
-![imagen](uploads/c8148ac29c59ed7f7228570e0529cc47/imagen.png)
-
+![image](https://user-images.githubusercontent.com/12683240/214584069-ddb45ad3-8ace-405b-9301-9c2b77606c6a.png)
 
 
 ## Approaches using Module Federation
@@ -168,7 +167,7 @@ Keywords:
 
 In this approach, you have a master project, which can be done in react or angular, and this will be responsible for consuming and orchestrating the child applications.
 
-![imagen](uploads/82e34679fd27cd411bd2d82f3397d988/imagen.png)
+![image](https://user-images.githubusercontent.com/12683240/214584107-4226361c-9eee-43d9-8347-8ad3c4b1d2a7.png)
 
 2. Advantages 
 
@@ -185,7 +184,7 @@ In this approach, you have a master project, which can be done in react or angul
 
 The shell/master application, in addition to orchestrating external components. It will also have business logic. In this case, the shell will consume an entire remote application, so repetitive components such as login, navigation bar, should be removed or hidden somewhere.
 
-![imagen](uploads/ae9e21dce2ef7d1437b9d47c97b7a122/imagen.png)
+![image](https://user-images.githubusercontent.com/12683240/214584154-8216fa33-8296-4aed-9ba2-8e0ec79b7529.png)
 
 2. Advantages 
 
@@ -203,7 +202,7 @@ The shell/master application, in addition to orchestrating external components. 
 
 In this approach, what is exposed are components, and not the complete application, as in the previous approaches. This allows you to have your own components and exposed components in both applications, which facilitates organization and independence.
 
-![imagen](uploads/bde3b21fbc42f22b8d00c1f3211c21c5/imagen.png)
+![image](https://user-images.githubusercontent.com/12683240/214584200-923ca77d-33b3-4d02-811b-ced1fb05dbf7.png)
 
 2. Advantages 
 
@@ -219,7 +218,7 @@ Ease of layout, since only specific parts will be exposed.
 
 A. Microfront sharing applications
 
-![imagen](uploads/9c7b6c9868b766a8c66b5b906d42305e/imagen.png)
+![image](https://user-images.githubusercontent.com/12683240/214584256-728b17d1-bda8-429e-bfad-67a2a267da50.png)
 
 Apply to following approaches:
 
@@ -229,9 +228,9 @@ Apply to following approaches:
 
 B. Microfront sharing components
 
-![imagen](uploads/7f4fcdee468bdb82bcfb0cf260dd1183/imagen.png)
+![image](https://user-images.githubusercontent.com/12683240/214584293-ed2e804c-096e-4bf2-85c4-cb75393af510.png)
 
-![imagen](uploads/20a90550670a9dd850df2038f42f9c9c/imagen.png)
+![image](https://user-images.githubusercontent.com/12683240/214584322-e678edea-7fa5-4d02-a329-b74ea147d1cb.png)
 
 Apply to following approaches
 
@@ -240,7 +239,7 @@ Apply to following approaches
 
 C. Microfront with web Meetpoint application
 
-![imagen](uploads/ab3290a59236174e9d21cf0d84003479/imagen.png)
+![image](https://user-images.githubusercontent.com/12683240/214584357-95cb8270-507c-455b-b402-4c96b0f7549e.png)
 
 This project it's only to find quickly posibles problems when we try to implement micro-front in Meetpoint
 
@@ -316,7 +315,7 @@ Communication can be done using javascript custom events
 
 - check here for more detail — https://giters.com/nrwl/nx/issues/7862.
 
-![imagen](uploads/af4f9fad3a9778627faf03b762d89823/imagen.png)
+![image](https://user-images.githubusercontent.com/12683240/214584465-313e7272-5a73-4c4f-b7ae-0ad8af387baf.png)
 
 
     1.2. Zone.js error
@@ -324,7 +323,7 @@ Communication can be done using javascript custom events
 - We get the below error as angular needs zone.js for change detection
 - A quick fix to this is to import “zone.js” in the exposed module.
 
-![imagen](uploads/c1afdbc5fe39d740f1b50d2b53304e7b/imagen.png)
+![image](https://user-images.githubusercontent.com/12683240/214584497-5c3e6855-4618-4460-912c-c20214424f3c.png)
 
 
     1.3. Public path explicitly error
@@ -338,7 +337,7 @@ webpackConfig.output.publicPath = “auto”;
 
 - Check here for more details — https://webpack.js.org/guides/public-path/#automatic-publicpath
 
-![imagen](uploads/42799408e61e7a63a5533e09f75acfbf/imagen.png)
+![image](https://user-images.githubusercontent.com/12683240/214584541-946decf8-34d5-4e9d-91cd-9eb16c5dd2bc.png)
 
 
     1.4. Eager consumption error
@@ -347,14 +346,14 @@ webpackConfig.output.publicPath = “auto”;
 - create a file bootstrap.js copy everything from index.js to bootstrap.js
 - In index.js just write import (“bootstrap.js”) .
 
-![imagen](uploads/c33b92fe30dbb51340bdf58a207b7900/imagen.png)
+![image](https://user-images.githubusercontent.com/12683240/214584609-463922d9-be51-4494-bf43-5a161b1fb9b9.png)
 
 
     1.5. Images not found error
 
 - A quick fix it's convert the images to base64
 
-![imagen](uploads/0574421c504b12da95a655da25d3371e/imagen.png)
+![image](https://user-images.githubusercontent.com/12683240/214584643-3c6897c8-93a2-4a31-a07f-48120131b61f.png)
 
     1.6. Conflict with sub dependencies
 
